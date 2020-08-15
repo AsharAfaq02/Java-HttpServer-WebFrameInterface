@@ -1,0 +1,13 @@
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import com.sun.net.httpserver.HttpServer;
+
+public class LocalhostServer {
+public static void main(String[] args) throws IOException {
+	
+	HttpServer server = HttpServer.create(new InetSocketAddress(**PORT**), 0);
+     com.sun.net.httpserver.HttpContext context = server.createContext("/");
+     context.setHandler(LocalhostServer::handleRequest);
+     server.start();
+     }
+     }
